@@ -1,4 +1,4 @@
-import gameState from "./gameState.js";
+import game from "./gameState.js";
 
 const TICK_RATE = 3000;
 
@@ -11,7 +11,7 @@ async function init() {
     const now = Date.now();
 
     if (nextTimeToTick <= now) {
-      gameState.tick();
+      game.tick();
       nextTimeToTick = now + TICK_RATE;
     }
 
