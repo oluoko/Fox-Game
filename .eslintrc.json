@@ -4,17 +4,17 @@
     "plugin:import/errors",
     "prettier"
   ],
-  "rulles": {
-    "no-console": 1,
-    },
-    "plugins": ["import"],
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "env": {
-      "node": true,
-      "es6": true,
-      "browser": true
-    }
+  "rules": {
+    "no-console": 1
+  },
+  "plugins": ["import"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
 }
