@@ -2,10 +2,6 @@ import gameState from "./gameState.js";
 
 const TICK_RATE = 3000;
 
-function tick() {
-  console.log("tick", Date.now());
-}
-
 async function init() {
   console.log("starting game");
 
