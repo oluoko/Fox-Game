@@ -20,6 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
+
   left: 0;
   right: 0;
   top: 0;
@@ -39,8 +40,8 @@ body {
   width: 628px;
   height: 577px;
   position: absolute;
-  top: 62px;
-  left: 67x;
+  top: 70px;
+  left: 67px;
 }
 
 .game.night {
@@ -83,10 +84,11 @@ body {
 
 .modal {
   position: absolute;
-  top: 0;
+  top: -90px;
   left: 0;
   right: 0;
   background-color: blueviolet;
+  padding: 20px;
 }
 
 .modal:empty {
