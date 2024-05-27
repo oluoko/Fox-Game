@@ -13,35 +13,45 @@ body {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .frame {
-  height: 762px;
-  width: 762px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 50%;
+  height: 20%;
   position: relative;
+  background-color: #fff;
 }
 
 .game {
   width: 628px;
-  height: 577px;
-  position: absolute;
-  top: 70px;
-  left: 67px;
+  height: 489px;
+
+  top: 81px;
+  left: 68px;
 }
 
 .game.night {
@@ -55,7 +65,6 @@ body {
 }
 
 .buttons {
-  position: absolute;
   top: 674px;
   left: 266px;
   height: 71px;
@@ -66,7 +75,6 @@ body {
 }
 
 .icons {
-  position: absolute;
   top: 572px;
   left: 194px;
   height: 67px;
@@ -77,13 +85,11 @@ body {
 }
 
 .poop-bag {
-  position: absolute;
   top: 302px;
   left: 160px;
 }
 
 .modal {
-  position: absolute;
   top: -90px;
   left: 0;
   right: 0;
@@ -100,7 +106,6 @@ body {
 }
 
 .fox {
-  position: absolute;
   top: 336px;
   left: 285px;
   overflow: hidden;
