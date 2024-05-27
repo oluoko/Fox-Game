@@ -247,9 +247,6 @@
 
 .frame {
   background-image: url(./bg/FRAME.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .game {
