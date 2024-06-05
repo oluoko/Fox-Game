@@ -1,6 +1,5 @@
 import game from "./gameState.js";
-
-const TICK_RATE = 3000;
+import { TICK_RATE } from "./constans.js";
 
 async function init() {
   console.log("starting game");
