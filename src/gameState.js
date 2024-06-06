@@ -24,6 +24,7 @@ const gameState = {
     this.wakeTime = -1;
     modFox("idling");
     this.scene = Math.random() > RAIN_CHANCE ? 0 : 1;
+    modScene(SCENES[this.scene]);
   },
   handleUserAction(icon) {
     if (
