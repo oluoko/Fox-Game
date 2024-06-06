@@ -19,9 +19,10 @@ const gameState = {
     modScene("day");
   },
   wake() {
-    console.log("awoken");
     this.current = "IDLING";
     this.wakeTime = -1;
+    modFox("idling");
+    this.scene = Math.random() > RAIN_CHANCE ? 0 : 1;
   },
   handleUserAction(icon) {
     if (
