@@ -1,4 +1,5 @@
 import { modFox, modScene } from "./ui";
+import { RAIN_CHANCE } from "./constants.js";
 
 const gameState = {
   current: "INIT",
