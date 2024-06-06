@@ -29,6 +29,18 @@ const gameState = {
       this.startGame();
       return;
     }
+
+    switch (icon) {
+      case "weather":
+        this.changeWeather();
+        break;
+      case "poop":
+        this.cleanUpPoop();
+        break;
+      case "fish":
+        this.feed();
+        break;
+    }
   },
 };
 
