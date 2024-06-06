@@ -1,4 +1,4 @@
-import { modFox, modScene } from "./ui";
+import { modFox, modScene } from "./ui.js";
 import { RAIN_CHANCE, SCENES } from "./constants.js";
 
 const gameState = {
@@ -20,6 +20,7 @@ const gameState = {
     modScene("day");
   },
   wake() {
+    this.scene;
     this.current = "IDLING";
     this.wakeTime = -1;
     modFox("idling");
