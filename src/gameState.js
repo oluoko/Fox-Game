@@ -42,6 +42,16 @@ const gameState = {
         break;
     }
   },
+
+  changeWeather() {
+    console.log("changeWeather");
+  },
+  cleanUpPoop() {
+    console.log("cleanUpPoop");
+  },
+  feed() {
+    console.log("feed");
+  },
 };
 
 export default gameState;
