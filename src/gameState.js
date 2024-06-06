@@ -1,11 +1,20 @@
 import { modFox, modScene } from "./ui.js";
-import { RAIN_CHANCE, SCENES, DAY_LENGTH, NIGHT_LENGTH } from "./constants.js";
+import {
+  RAIN_CHANCE,
+  SCENES,
+  DAY_LENGTH,
+  NIGHT_LENGTH,
+  getNextDieTime,
+  getNextHungerTime,
+} from "./constants.js";
 
 const gameState = {
   current: "INIT",
   clock: 1,
   wakeTime: -1,
   sleepTime: -1,
+  hungryTime: -1,
+  dieTime: -1,
   tick() {
     this.clock++;
     console.log("clock", this.clock);
