@@ -1,5 +1,5 @@
 import game from "./gameState.js";
-import { TICK_RATE } from "./constans.js";
+import { TICK_RATE } from "./constants.js";
 import initButtons from "./buttons.js";
 
 async function init() {
