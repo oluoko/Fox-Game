@@ -12,6 +12,11 @@ const gameState = {
     this.current = "HATCHING";
     this.wakeTime = this.clock + 3;
   },
+  wake() {
+    console.log("awoken");
+    this.current = "IDLING";
+    this.wakeTime = -1;
+  },
   handleUserAction(icon) {
     console.log(icon);
   },
