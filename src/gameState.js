@@ -18,7 +18,12 @@ const gameState = {
     this.wakeTime = -1;
   },
   handleUserAction(icon) {
-    console.log(icon);
+    if (
+      ["SLEEP", "FEEDING", "CELEBRATING", "HATCHING"].includes(this.current)
+    ) {
+      // do nothing
+      return;
+    }
   },
 };
 
