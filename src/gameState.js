@@ -5,6 +5,8 @@ const gameState = {
   tick() {
     this.clock++;
     console.log("clock", this.clock);
+
+    if (this.clock === this.wakeTime) this.wake();
     return this.clock;
   },
   startGame() {
