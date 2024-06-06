@@ -24,6 +24,11 @@ const gameState = {
       // do nothing
       return;
     }
+
+    if (this.current === "INIT" || this.current === "DEAD") {
+      this.startGame();
+      return;
+    }
   },
 };
 
