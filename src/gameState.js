@@ -23,6 +23,10 @@ const gameState = {
       this.wake();
     } else if (this.clock === this.sleepTime) {
       this.sleep();
+    } else if (this.clock === this.hungryTime) {
+      this.getHungry();
+    } else if (this.clock === this.dieTime) {
+      this.die();
     }
     return this.clock;
   },
