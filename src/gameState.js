@@ -1,3 +1,5 @@
+import { modFox, modScene } from "./ui";
+
 const gameState = {
   current: "INIT",
   clock: 1,
@@ -13,6 +15,8 @@ const gameState = {
     console.log("hatching");
     this.current = "HATCHING";
     this.wakeTime = this.clock + 3;
+    modFox("egg");
+    modScene("day");
   },
   wake() {
     console.log("awoken");
