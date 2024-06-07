@@ -6,6 +6,7 @@ import {
   NIGHT_LENGTH,
   getNextDieTime,
   getNextHungerTime,
+  getNextPoopTime,
 } from "./constants.js";
 
 const gameState = {
