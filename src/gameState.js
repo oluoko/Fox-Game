@@ -45,12 +45,24 @@ const gameState = {
     this.scene = Math.random() > RAIN_CHANCE ? 0 : 1;
     modScene(SCENES[this.scene]);
     this.sleepTime = this.clock + DAY_LENGTH;
+    this.hungryTime = getNextHungerTime(this.clock);
   },
   sleep() {
     this.state = "SLEEP";
     modFox("sleep");
     modScene("night");
     this.wakeTime = this.clock + NIGHT_LENGTH;
+  },
+  getHungry() {
+    this.current = "HUNGRY";
+    this.dieTime = getNextDieTime(this.clock);
+    this.hungryTime = -1;
+    modFox("hungry");
+  },
+  die() {
+    this.current = "DEAD";
+    modScene("dead");
+    modFox("dead");
   },
   handleUserAction(icon) {
     if (
@@ -85,7 +97,13 @@ const gameState = {
     console.log("cleanUpPoop");
   },
   feed() {
-    console.log("feed");
+    if (this.current !== "HUNGRY") return;
+
+    this.current = "FEEDING";
+    this.dieTime = -1;
+    this.poopTime = getNextDieTime(this.clock);
+    modFox("eating");
+    this.timeToStartCelebrating = this.clock + 2;
   },
 };
 
