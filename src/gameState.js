@@ -16,6 +16,7 @@ const gameState = {
   sleepTime: -1,
   hungryTime: -1,
   dieTime: -1,
+  poopTime: -1,
   timeToStartCelebrating: -1,
   timeToEndCelebrating: -1,
   tick() {
@@ -34,6 +35,8 @@ const gameState = {
       this.startCelebrating();
     } else if (this.clock === this.timeToEndCelebrating) {
       this.endCelebrating();
+    } else if (this.clock === this.poopTime) {
+      this.poop();
     }
     return this.clock;
   },
