@@ -44,11 +44,11 @@ const gameState = {
     this.scene;
     this.current = "IDLING";
     this.wakeTime = -1;
-    modFox("idling");
     this.scene = Math.random() > RAIN_CHANCE ? 0 : 1;
     modScene(SCENES[this.scene]);
     this.sleepTime = this.clock + DAY_LENGTH;
     this.hungryTime = getNextHungerTime(this.clock);
+    this.determineFoxState();
   },
   sleep() {
     this.state = "SLEEP";
@@ -72,6 +72,20 @@ const gameState = {
     modFox("celebrate");
     this.timeToStartCelebrating = -1;
     this.timeToEndCelebrating = this.clock + 2;
+  },
+  endCelebrating() {
+    this.timeToEndCelebrating = -1;
+    this.current = "IDLING";
+    this.determineFoxState();
+  },
+  determineFoxState() {
+    if (this.current === "IDLING") {
+      if (SCENES[this.scene] === "rain") {
+        modFox("rain");
+      } else {
+        modFox("idling");
+      }
+    }
   },
   handleUserAction(icon) {
     if (
