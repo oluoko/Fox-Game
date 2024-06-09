@@ -16,6 +16,8 @@ const gameState = {
   sleepTime: -1,
   hungryTime: -1,
   dieTime: -1,
+  timeToStartCelebrating: -1,
+  timeToEndCelebrating: -1,
   tick() {
     this.clock++;
     console.log("clock", this.clock);
