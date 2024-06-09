@@ -86,18 +86,15 @@ body {
 /* modal */
 
 .modal-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: blueviolet;
   color: white;
   padding: 20px;
   font-size: 20px;
   border-radius: 5px;
-}
-
-.modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .modal:empty {

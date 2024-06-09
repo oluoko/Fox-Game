@@ -1,4 +1,4 @@
-import { modFox, modScene, togglePoopBag } from "./ui.js";
+import { modFox, modScene, togglePoopBag, writeModal } from "./ui.js";
 import {
   RAIN_CHANCE,
   SCENES,
@@ -41,11 +41,11 @@ const gameState = {
     return this.clock;
   },
   startGame() {
-    console.log("hatching");
     this.current = "HATCHING";
     this.wakeTime = this.clock + 3;
     modFox("egg");
     modScene("day");
+    writeModal();
   },
   wake() {
     this.scene;
