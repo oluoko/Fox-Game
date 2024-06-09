@@ -67,6 +67,12 @@ const gameState = {
     modScene("dead");
     modFox("dead");
   },
+  startCelebrating() {
+    this.current = "CELEBRATING";
+    modFox("celebrate");
+    this.timeToStartCelebrating = -1;
+    this.timeToEndCelebrating = this.clock + 2;
+  },
   handleUserAction(icon) {
     if (
       ["SLEEP", "FEEDING", "CELEBRATING", "HATCHING"].includes(this.current)
