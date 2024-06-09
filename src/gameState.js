@@ -157,7 +157,7 @@ const gameState = {
 
     this.current = "FEEDING";
     this.dieTime = -1;
-    this.poopTime = getNextDieTime(this.clock);
+    this.poopTime = getNextPoopTime(this.clock);
     modFox("eating");
     this.timeToStartCelebrating = this.clock + 2;
   },
